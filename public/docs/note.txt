@@ -1,0 +1,157 @@
+statistic
+user
+category
+invoice
+company
+customer
+ product
+
+أعمدة جدول الشركة | companies
+
+اسم 
+عنوان فرعي
+المدينة
+الحي 
+علم
+رقم التيلفون 1
+رقم التيلفون 2
+الرقم الضريبي
+//
+name
+sub_address
+city
+district
+science
+phone_number_1
+phone_number_2
+tax_number
+
+أعمدة جدول العملاء | customers
+الإسم 
+المدينة
+الحي
+علم
+رقم الجوال
+الرقم الضريبي
+//
+name
+city
+district
+science
+phone
+tax_number
+
+أعمدة جدول التصنيفات | customers
+أعمدة جدول المنتجات | products
+اسم
+سعر
+قيمة مصافة
+صافي إجمالي
+الصنف
+الفواتير
+//
+name
+price
+tax_value
+net_total
+category_id
+invoice_id
+//
+CategoryProduct
+
+$table->foreignId('category_id');
+$table->foreignId('product_id');
+
+return [
+ 'product_id' => $this->faker->numberBetween(1,10),
+ 'category_id' => $this->faker->numberBetween(1,10),
+];
+
+catgory_proudct::factory(100)->create();
+
+ 
+product
+
+
+companies
+
+w3-bar-item w3-hover-text-white w3-right
+
+user
+	red
+company 
+	orange building 
+category
+	blue 
+products
+	indigo 
+inv
+	teal
+
+
+
+الرّياض.
+جدة.
+مكة المُكرمة.
+المدينة المنورة.
+الأحساء.
+الطائف.
+خميس مشيط.
+حائل.
+حفر الباطن.
+الجبيل.
+الخرج.
+أبها.
+الدّمام.
+نجران.
+بريدة.
+ينبع.
+تبوك.
+القنفذة.
+القطيف.
+جازان.
+
+categories
+
+getColumnListing
+
+========================================================================
+invoices
+/*
+
+العنوان الفرعي
+كمية
+ملحوظات
+المجموع
+قيمة الضريبة
+المدفوع
+البقية
+نوع الدفع
+صافي الإجمالي
+رقم خاص
+الوقت و التاريخ 
+             */
+
+
+invoice_type
+quantity
+notes
+total
+tax_value
+paid_up
+the_rest
+payment_type
+net_tot
+special_number
+time_and_date
+==========================================================================
+'id': id,
+                        'name': name,
+                        'sub_address': sub_address,
+                        'city': city,
+                        'district': district,
+                        'science': science,
+                        'phone_number_1': phone_number_1,
+                        'phone_number_2': phone_number_2,
+                        'tax_number': tax_number,
+                        'user_id': user_id,
